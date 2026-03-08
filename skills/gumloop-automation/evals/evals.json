@@ -1,0 +1,23 @@
+{
+  "skill_name": "gumloop-automation",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to automate competitive research. Design and run a pipeline for me: take these 3 SaaS tools — Notion, Airtable, Coda — and build a comparison. I need: their primary use case, pricing tiers (free/paid), key differentiators, and best-fit audience. Output it as a structured markdown report with a comparison table.",
+      "expected_output": "A structured pipeline design showing nodes (Input → Research/Scrape → AI Extract → Compare → Report), followed by execution with step-by-step node completions, and a final markdown report with a comparison table covering all 3 tools across all 4 requested dimensions.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I have 5 job postings I need to parse into a structured database. Here they are:\n\n1. Senior Backend Engineer at Stripe, San Francisco CA, $180k-$220k, requires 5+ years Python/Go, distributed systems experience, PostgreSQL\n2. Product Designer at Figma, Remote, $140k-$170k, requires Figma expertise, 3+ years UX, portfolio required\n3. Data Scientist at OpenAI, NYC or Remote, $160k-$200k, requires PhD or 4+ years ML, PyTorch, LLM fine-tuning experience\n4. DevOps Engineer at Cloudflare, Austin TX, $130k-$160k, requires Kubernetes, Terraform, 3+ years cloud infra\n5. Growth Marketing Manager at Linear, Remote, $110k-$140k, requires B2B SaaS experience, SQL, 4+ years growth\n\nExtract all fields and give me a JSON output with a clean schema.",
+      "expected_output": "A pipeline design (Input → Parse → AI Extract Fields → Validate → JSON Output) followed by node-by-node execution, and a final JSON array with 5 objects each containing: title, company, location, salary_min, salary_max, remote (boolean), requirements (array), years_experience, and any other relevant fields extracted.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Build me a batch content generation pipeline. I have these 4 Python libraries: pandas, requests, FastAPI, SQLAlchemy. For each one, I need: (1) a one-sentence description for a developer glossary, (2) a classification tag from this list: [data, web, api, database, utility], (3) a difficulty level: [beginner, intermediate, advanced], and (4) one real-world use case example sentence. Output the whole thing as a CSV I can paste into a spreadsheet.",
+      "expected_output": "A pipeline design (List Input → Loop(AI Generate → Classify) → Merge → CSV Output) with node-by-node execution logs, and a final CSV with 4 rows and columns: library, description, tag, difficulty, use_case. CSV should have a header row and all 4 libraries filled in correctly.",
+      "files": []
+    }
+  ]
+}
